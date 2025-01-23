@@ -1,11 +1,20 @@
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
-function profile() {
+
+const profile = async () => {
+     const { getUser } = getKindeServerSession()
+        const user = await getUser()
+        console.log(user);
 
     return (
-        <div>
-            profile
+        <div className="container mx-auto">
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     );
-}
+};
 
 export default profile;

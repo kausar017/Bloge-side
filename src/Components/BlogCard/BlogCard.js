@@ -4,10 +4,10 @@ import React from 'react';
 const BlogCard = ({ blog }) => {
     const { id, title, body } = blog;
     // console.log(id);
-
+ 
     return (
         <div>
-            <div className="card bg-white w-full h-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div className="card bg-black/20 w-full h-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                 <div className="card-body p-6 flex flex-col h-full">
                     <h1 className="text-lg font-semibold text-gray-700 mb-2">
                         Post No: <span className="text-blue-600">{id}</span>
