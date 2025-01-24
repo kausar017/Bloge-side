@@ -30,10 +30,18 @@ const Navber = async () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow space-y-2">
                             <Link href={'/'}>Home</Link>
-                            <li><a>Item 1</a></li>
+                            <Link className="btn-sm b" href={`${user ? "/profile" : "/api/auth/login"}`}>Profile</Link>
+                            <ul className="">
+                                {
+                                    !user && <li className=""><LoginLink>Sign in</LoginLink></li>
+                                }
 
+                                {
+                                    user && <li className=""> <LogoutLink>Sign out</LogoutLink></li>
+                                }
+                            </ul>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">Bloge Viwer</a>
