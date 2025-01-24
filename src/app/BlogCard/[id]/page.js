@@ -1,9 +1,12 @@
+import Loader from '@/app/loader/page';
 import Link from 'next/link';
 import React from 'react';
 
 const Detals = async ({ params }) => {
+    if (!params) {
+        return <Loader></Loader>
+    }
     const { id } = params;
-    // hello
     // Fetch data for the specific ID
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
     const data = await res.json();

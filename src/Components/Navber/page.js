@@ -44,7 +44,6 @@ const Navber = async () => {
 
                         <Link className="btn btn-sm btn-ghost btn-outline" href={`${user ? "/profile" : "/api/auth/login"}`}>Profile</Link>
 
-                      
                     </ul>
                 </div>
                 <div className="navbar-end">
