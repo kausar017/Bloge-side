@@ -1,4 +1,4 @@
-import { RegisterLink, LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
 
@@ -40,7 +40,18 @@ const Navber = async () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-2">
                         <Link className="btn btn-sm btn-ghost btn-outline" href={'/'}>Home</Link>
-                        <Link className="btn btn-sm btn-ghost btn-outline" href={'/profile'}>Profile</Link>
+
+                        <Link className="btn btn-sm btn-ghost btn-outline" href={`${user ? "/profile" : "/api/auth/login"}`}>Profile</Link>
+
+                        {/* {
+                            user ?
+
+                                <Link className="btn btn-sm btn-ghost btn-outline" href={'/profile'}>Profile</Link>
+
+                                :
+                                <li className="btn btn-sm btn-ghost btn-outline"><LoginLink>Profile</LoginLink></li>
+                        } */}
+
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -64,10 +75,6 @@ const Navber = async () => {
                         {
                             user && <li className="btn btn-sm btn-ghost btn-outline"> <LogoutLink>Sign out</LogoutLink></li>
                         }
-                        {/* {
-                            !user && <li className="btn btn-sm btn-ghost btn-outline"> <RegisterLink>Sign up</RegisterLink></li>
-                        } */}
-
                     </ul>
                 </div>
             </div>
