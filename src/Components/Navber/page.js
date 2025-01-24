@@ -28,7 +28,7 @@ const Navber = async () => {
                                     d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>
                         </div>
-                        <ul
+                        {/* <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow space-y-2">
                             <Link href={'/'}>Home</Link>
@@ -42,7 +42,7 @@ const Navber = async () => {
                                     user && <li className=""> <LogoutLink>Sign out</LogoutLink></li>
                                 }
                             </ul>
-                        </ul>
+                        </ul> */}
                     </div>
                     <a className="btn btn-ghost text-xl">Bloge Viwer</a>
                 </div>
