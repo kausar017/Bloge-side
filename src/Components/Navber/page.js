@@ -48,9 +48,9 @@ const Navber = async () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-2">
-                        <Link className="btn btn-sm btn-ghost btn-outline" href={'/'}>Home</Link>
+                        <button className="btn btn-sm btn-ghost btn-outline"><Link  href={'/'}>Home</Link></button>
 
-                        <Link className="btn btn-sm btn-ghost btn-outline" href={`${user ? "/profile" : "/api/auth/login"}`}>Profile</Link>
+                        <button className="btn btn-sm btn-ghost btn-outline"><Link href={`${user ? "/profile" : "/api/auth/login"}`}>Profile</Link></button>
 
                     </ul>
                 </div>
@@ -69,11 +69,11 @@ const Navber = async () => {
 
                     <ul className="space-x-3">
                         {
-                            !user && <li className="btn btn-sm btn-ghost btn-outline"><LoginLink>Sign in</LoginLink></li>
+                            !user && <button className="btn btn-sm btn-ghost btn-outline"><LoginLink>Sign in</LoginLink></button>
                         }
 
                         {
-                            user && <li className="btn btn-sm btn-ghost btn-outline"> <LogoutLink>Sign out</LogoutLink></li>
+                            user && <button className="btn btn-sm btn-ghost btn-outline"> <LogoutLink>Sign out</LogoutLink></button>
                         }
                     </ul>
                 </div>
