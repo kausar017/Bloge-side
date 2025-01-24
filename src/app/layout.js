@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       >
         {/* Navber */}
         <Navber></Navber>
-        <div className="pt-20">
+        <div className="pt-20">   
           {children}
         </div>
       </body>

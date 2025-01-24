@@ -2,7 +2,7 @@
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
-import './navber.css'
+import '../../../public/navber.css'
 
 const Navber = async () => {
     const { getUser } = getKindeServerSession()
