@@ -25,7 +25,7 @@ const BlogCard = ({ blog }) => {
 
                     <div className="mt-auto">
                         <Link href={`/BlogCard/${id}`}>
-                            <button className="mt-4 inline-block px-4 py-2 text-sm text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors duration-200 hover:zoom-in">
+                            <button className="mt-4 inline-block px-4 py-2 text-sm text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors">
                                 Read More
                             </button>
                         </Link>
