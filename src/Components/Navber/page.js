@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
@@ -43,15 +44,7 @@ const Navber = async () => {
 
                         <Link className="btn btn-sm btn-ghost btn-outline" href={`${user ? "/profile" : "/api/auth/login"}`}>Profile</Link>
 
-                        {/* {
-                            user ?
-
-                                <Link className="btn btn-sm btn-ghost btn-outline" href={'/profile'}>Profile</Link>
-
-                                :
-                                <li className="btn btn-sm btn-ghost btn-outline"><LoginLink>Profile</LoginLink></li>
-                        } */}
-
+                      
                     </ul>
                 </div>
                 <div className="navbar-end">
