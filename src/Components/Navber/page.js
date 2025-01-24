@@ -46,11 +46,11 @@ const Navber = async () => {
                     </div> */}
                     <a className="btn btn-ghost text-xl">Bloge Viwer</a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-2">
-                        <button><Link  href={'/'}>Home</Link></button>
+                        <button className="stylebtn"><Link href={'/'}>Home</Link></button>
 
-                        <button className="btn btn-sm btn-ghost btn-outline"><Link href={`${user ? "/profile" : "/api/auth/login"}`}>Profile</Link></button>
+                        <button className="stylebtn"><Link href={`${user ? "/profile" : "/api/auth/login"}`}>Profile</Link></button>
 
                     </ul>
                 </div>
@@ -63,17 +63,17 @@ const Navber = async () => {
                     }
                     {
                         !user && <div className="rounded-full">
-                            <img width='50' className="rounded-full mr-2" src='https://i.postimg.cc/yxBM0XS4/user.png' alt={user?.picture} />
+                            <img width='50' className="rounded-full mr-2" referrerPolicy="no-referrer" src='https://i.postimg.cc/yxBM0XS4/user.png' alt={user?.picture} />
                         </div>
                     }
 
                     <ul className="space-x-3">
                         {
-                            !user && <button className="btn btn-sm btn-ghost btn-outline"><LoginLink>Sign in</LoginLink></button>
+                            !user && <button className="loginbtn"><LoginLink>Sign in</LoginLink></button>
                         }
 
                         {
-                            user && <button className="btn btn-sm btn-ghost btn-outline"> <LogoutLink>Sign out</LogoutLink></button>
+                            user && <button className="singbtn"> <LogoutLink>Sign out</LogoutLink></button>
                         }
                     </ul>
                 </div>
