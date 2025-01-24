@@ -9,6 +9,9 @@ const Detals = async ({ params }) => {
     const { id } = params;
     // Fetch data for the specific ID
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    if (!res.ok) {
+        return <div>Error: Failed to fetch post data</div>;
+    }
     const data = await res.json();
 
     return (
