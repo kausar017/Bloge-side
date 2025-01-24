@@ -48,7 +48,7 @@ const Navber = async () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-2">
-                        <button className="btn btn-sm btn-ghost btn-outline"><Link  href={'/'}>Home</Link></button>
+                        <button><Link  href={'/'}>Home</Link></button>
 
                         <button className="btn btn-sm btn-ghost btn-outline"><Link href={`${user ? "/profile" : "/api/auth/login"}`}>Profile</Link></button>
 
