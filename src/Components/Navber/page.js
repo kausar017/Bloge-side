@@ -2,7 +2,7 @@
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
-
+import './navber.css'
 
 const Navber = async () => {
     const { getUser } = getKindeServerSession()
@@ -11,8 +11,8 @@ const Navber = async () => {
 
     return (
         <div className="bg-base-200 fixed z-10 w-full">
-            <div className="navbar container mx-auto">
-                <div className="navbar-start">
+            <div className="style container mx-auto">
+                <div className="">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg
@@ -46,7 +46,7 @@ const Navber = async () => {
 
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="style1">
 
                     {
                         user && < div className="rounded-full">

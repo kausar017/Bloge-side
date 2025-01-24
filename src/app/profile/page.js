@@ -1,17 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-// import { useKindeAuth } from '@kinde-oss/kinde-auth-nextjs';
+
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 
 const profile = async () => {
     const { getUser } = getKindeServerSession()
-    
-    // const { isAuthenticated, login, logout } = useKindeAuth()
-
-    // if(!isAuthenticated){
-    //     ret
-    // }
-
+  
     const user = await getUser()
     // console.log(user);
 
